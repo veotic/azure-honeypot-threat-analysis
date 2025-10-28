@@ -1,7 +1,7 @@
 # azure-honeypot-threat-analysis
 **Made by: Angelo Monge**
 
-###Lab Project Documentation
+### Lab Project Documentation
 
 Objective:
 Design and deploy a cloud-based honeypot in Microsoft Azure, effectively simulating a real-world enterprise endpoint, capturing unauthorized access/login attempts, and analyzing attacker behavior by using a centralized log analytics workspace and data visualization in Microsoft Sentinel, essentially their SIEM (Security Information Event Management). This project will demonstrate practical knowledge of cloud security architecture, cyber threat analysis, and SIEM integration. 
@@ -54,7 +54,7 @@ https://github.com/veotic/azure-honeypot-threat-analysis/blob/114fe0a6e0102e328b
 - Mapped the specific locations of login attempts globally to visualize real-time attacker origin points
 
 *(These are the results after a few minutes)*
-https://github.com/veotic/azure-honeypot-threat-analysis/blob/114fe0a6e0102e328b5284dfa7ad967f1edea946/proj_img_4.png
+[https://github.com/veotic/azure-honeypot-threat-analysis/blob/114fe0a6e0102e328b5284dfa7ad967f1edea946/proj_img_4.png](https://github.com/veotic/azure-honeypot-threat-analysis/blob/main/proj_img_4.png?raw=true)
 
 ### Conclusion
 In the following days I would receive 50k+ attacks. In my observation, it seems that most of these attacks are directed from the Netherlands.
