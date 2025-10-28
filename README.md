@@ -1,5 +1,5 @@
 # azure-honeypot-threat-analysis
-**Made by: Angelo Monge**
+**Made by: Angelo**
 
 ### Lab Project Documentation
 
