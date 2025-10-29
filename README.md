@@ -9,7 +9,7 @@ Design and deploy a cloud-based honeypot in Microsoft Azure, effectively simulat
 *(Image below is the lab map)*
 ![image_alt](https://github.com/veotic/azure-honeypot-threat-analysis/blob/114fe0a6e0102e328b5284dfa7ad967f1edea946/proj_img_1.png)
 
-##Project Overview
+## Project Overview
 - Platform: Microsoft Azure
 - OS: Windows 10 Enterprise 22H2 x64 Gen2
 - Host Name: CORP-BACKUP-EAST-1
@@ -22,13 +22,13 @@ Design and deploy a cloud-based honeypot in Microsoft Azure, effectively simulat
   - Kusto Query Language (KQL)
   - GeoIP Watchlist
 
-##1. ) Configuration Process
+## 1.) Configuration Process
 - Created a new Azure Resource Group and VNet
 - Deployed a VM using Windows 10 Enterprise 22H2 x64 Gen2, named CORP-BACKUP-EAST-1
 - Configured a custom Network Security Group that simulates vulnerable inbound access by allowing any malicious traffic
 - Disabled Windows Defender Firewall to emulate an unprotected endpoint
 
-##2.) Attack Simulation and Data Capture
+## 2.) Attack Simulation and Data Capture
 - Exposed the VM entirely to the internet and observed any brute-force attempts
 - The image below shows that within the first two hours, the Windows recorded that approximately 19,000 brute forces occurred
 - Over the next several days, this will be go up to 50,000+
@@ -36,12 +36,12 @@ Design and deploy a cloud-based honeypot in Microsoft Azure, effectively simulat
 *(Turning off windows firewall)*
 ![image_alt](https://github.com/veotic/azure-honeypot-threat-analysis/blob/114fe0a6e0102e328b5284dfa7ad967f1edea946/proj_img_2.png)
 
-##3.) SIEM Integration**
+## 3.) SIEM Integration
 - Created a Log Analytics Workspace (LAW) to connect it to the VM using the Azure Monitor Agent Security Events connector
 - Verified the ingestion of Security Event logs and confirm any Event ID 4625 (failed login) entires
 - Integrated Microsoft Sentinel with LAW to allow any real-time log analysis
 
-##4.) Log Analysis
+## 4.) Log Analysis
 - With the image below, it shows the use of KQL to query through the produced dataset
 - Imported GeoIP watchlist (geoip-summarized.csv) which had 54,000 rows of IP addresses to identify where the hackers are from
 - Utilized KQL queries to see any meaningful correlations
@@ -49,7 +49,7 @@ Design and deploy a cloud-based honeypot in Microsoft Azure, effectively simulat
 *(LAW after using the Data Collection Rule and we use KQL to query specific details)*
 ![image_alt](https://github.com/veotic/azure-honeypot-threat-analysis/blob/114fe0a6e0102e328b5284dfa7ad967f1edea946/proj_img_3.png)
 
-##5.) Visualization
+## 5.) Visualization
 - Created a custom Attack Map workbook in Microsoft Sentinel using JSON configurations and KQL
 - Mapped the specific locations of login attempts globally to visualize real-time attacker origin points
 
